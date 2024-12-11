@@ -1,0 +1,7 @@
+<div [ngClass]="{'app-input':true}">
+    <i class="fa  fa-user"></i>
+    <input [type]="type()" [disabled]="disabled" class="input" [ngClass]="{'has-value': appVal}" [(ngModel)]="appVal">
+    <span class="placeholder-label">user Name</span>
+    <i class="fa  fa-eye"></i>
+    <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+</div>

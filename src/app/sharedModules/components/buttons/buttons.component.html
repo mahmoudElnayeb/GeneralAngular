@@ -1,0 +1,18 @@
+<button [type]="type()" [disabled]="disabled()" [ngClass]="{
+  'app-btn-primary': variant() === 'primary',
+  'app-btn-primary-outline': variant() === 'primary-outline',
+  'app-btn-secondary': variant() === 'secondary',
+  'app-btn-secondary-outline': variant() === 'secondary-outline',
+  'app-btn-success': variant() === 'success',
+  'app-btn-success-outline': variant() === 'success-outline',
+  'app-btn-warning': variant() === 'warning',
+  'app-btn-warning-outline': variant() === 'warning-outline',
+  'app-btn px-5 py-2':true,
+}" (click)="click()">
+  @if (!loading()) {
+  <span> {{title()}}</span>
+  }
+  @else {
+  <i class="fa" [ngClass]="{'fa-spin fa-spinner':loading()}"></i>
+  }
+</button>
