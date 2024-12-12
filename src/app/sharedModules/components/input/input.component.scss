@@ -1,57 +1,76 @@
-@import "../../../assets//colors/variables/button-variable.scss";
-
-.app-input {
-    padding: 0 15px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    box-shadow: 0 0 5px #ccc;
-    outline: none;
-    max-width: fit-content;
-    display: flex;
-    align-items: center;
-    position: relative;
-    height: 60px;
-
-    &::placeholder {
-        color: #ccc;
-    }
-    .input {
-        outline: none;
-        border: none;
-        padding-inline: 0.5rem;
-        flex: 1;
-        height: 100%;
-    }
-
-    .placeholder-label {
-        position: absolute;
-        left: 20px;
-        top: 50%;
-        transform: translate(20px, -50%);
-        color: #ccc;
-        transition:
-            top 0.3s ease,
-            transform 0.3s ease;
-    }
-
-    .input:focus + .placeholder-label,
-    .input.has-value + .placeholder-label {
-        top: 10px;
-        transform: translate(13px, -10px);
-        transition: ease-in-out 0.3s;
-        left: 20px;
-        margin-bottom: 4px;
-        color: blue;
-        font-size: 13px;
-        outline: none;
-        font-weight: 500;
-        letter-spacing: 0.5px;
-        padding-left: 5px;
-    }
-}
-
 .error-message {
   color: red;
   font-size: 0.8em;
   margin-top: 5px;
 }
+
+.app-input-container {
+  position: relative;
+  display: flex;
+  gap: 0.2rem;
+  align-items: center;
+  width: 290px;
+  padding: 0 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 5px #ccc;
+  outline: none;
+
+  & > i {
+    margin-inline: 5px;
+  }
+
+  .input {
+    flex: 1;
+    border: none;
+    outline: none;
+    height: 50px;
+    padding-left: 30px;
+    padding: 1rem 0.75rem;
+    &:not(:placeholder-shown) {
+      padding-top: 2.3rem;
+      padding-bottom: 1rem;
+    }
+  }
+
+  .placeholder-label {
+    position: absolute;
+    left: 0;
+    padding: 1rem 0.75rem;
+    pointer-events: none;
+    border: 1px solid transparent;
+    transform-origin: top left;
+    transition: transform 0.1s ease-in-out;
+    color: #ccc;
+    margin-left: 30px;
+  }
+
+  .input:focus + .placeholder-label,
+  .input.has-value + .placeholder-label {
+    color: blue;
+    transform: scale(0.85) translateY(-0.5rem) translateX(0.5rem);
+  }
+
+  &[aria-icon ="false"] {
+    .input:focus + .placeholder-label,
+    .input.has-value + .placeholder-label {
+         margin-left: 0;
+      transform: scale(0.85) translateY(-0.5rem) translateX(6px) ;
+    }
+    .input:not(:focus) + .placeholder-label,
+    .input:not(.has-value) + .placeholder-label {
+        margin-left: 0;
+    }
+
+  }
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+// scale(0.85) translateY(-0.5rem) translateX(-1.7rem)

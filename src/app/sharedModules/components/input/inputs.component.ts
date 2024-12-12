@@ -18,12 +18,13 @@ import { ControlValueAccessor, FormsModule, NG_VALUE_ACCESSOR } from '@angular/f
 export class InputsComponent implements ControlValueAccessor {
 
   appVal: any;
-  type = input<'text'|'number'>('text');
-  placeholder = input<string>('placeholder');
+  type = input.required<'text' | 'number' | 'password'>();
+  placeholder = input.required<string>();
+  icon = input<string>();
   @Input() disabled:boolean=false;
-  value = input<string|number>('');
+  value = input<string | number>();
   errorMessage: string = '';
-
+  closedEye: boolean = true;
   onChange: any = () => {}
   onTouch: any = () => {}
 
@@ -47,6 +48,10 @@ export class InputsComponent implements ControlValueAccessor {
     } else {
       this.errorMessage = '';
     }
+  }
+
+  toggleEye(): void {
+    this.closedEye = !this.closedEye;
   }
 
 
