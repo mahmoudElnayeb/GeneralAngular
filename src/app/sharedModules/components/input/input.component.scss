@@ -1,5 +1,5 @@
 .error-message {
-  color: red;
+  color: var(--danger);
   font-size: 0.8em;
   margin-top: 5px;
 }
@@ -47,7 +47,7 @@
 
   .input:focus + .placeholder-label,
   .input.has-value + .placeholder-label {
-    color: blue;
+    color: var(--text-color);
     transform: scale(0.85) translateY(-0.5rem) translateX(0.2rem);
     font-weight: 600;
   }

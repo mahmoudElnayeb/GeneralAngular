@@ -28,7 +28,7 @@
       &:hover {
         background-color: transparent;
         border-color: var(--button-primary);
-        color: var(--white);
+        color: var(--button-primary-hover);
       }
     }
   }
@@ -51,6 +51,16 @@
     &:disabled {
       background-color: var(--button-secondary-disabled);
       border-color: var(--button-secondary-disabled);
+    }
+    &.outline {
+      background-color: transparent;
+      border-color: var(--button-secondary);
+      color: var(--button-secondary);
+      &:hover {
+        background-color: transparent;
+        border-color: var(--button-secondary);
+        color: var(--button-secondary-hover);
+      }
     }
   }
   &.success {
