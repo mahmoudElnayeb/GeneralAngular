@@ -1,3 +1,7 @@
-
-@use "./app/assets/colors/buttton/button.color.scss" as *;
-@use "./app/assets/colors/variables/button-variable.scss" as *; 
+@use "../src/app/assets/style/topography.scss" as *;
+@use "../src/app/assets/style/css-variable.scss" as *;
+@use "../src/app/assets/style/modes.scss" as *;
+@use "../src/app/assets/style/mixins.scss" as *;
+@use "../src/app/assets/style/brackpoint-variable.scss" as *;
+@use "../src/app/assets/style/transactions.variable.scss" as *;
+@use "../src/app/assets/colors/buttton/button.color.scss" as *;

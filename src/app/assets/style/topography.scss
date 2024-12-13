@@ -1,0 +1,16 @@
+@use "./mixins.scss" as *;
+
+.button {
+  @include button;
+}
+.button-l {
+  @include button-l;
+}
+
+.button-m {
+  @include button-m;
+}
+
+.button-s {
+  @include button-s;
+}

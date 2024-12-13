@@ -1,0 +1,108 @@
+@import "./colors.scss";
+
+:root {
+  --white: #{$white};
+  --black: #{$black};
+  --gray: #{$dim-gray};
+  --success: #{$forest-green};
+  --danger: #{$crimson};
+  --warning: #{$amber};
+  --info: #{$slate-gray};
+  --light: #{$off-white};
+  --dark: #{$midnight-blue};
+
+  //light colors
+  --light-primary: #{$linen};
+  --light-secondary: #{$midnight-blue};
+  --light-background: #{$off-white};
+  --light-text: #{$dim-gray};
+
+  // dark colors
+  --dark-primary: #{$midnight-navy};
+  --dark-secondary: #{$gradient-slate-gray};
+  --dark-background: #{$white};
+  --dark-text: #{$white};
+
+  // light Button colors
+  --light-button-primary: #{$midnight-navy};
+  --light-button-secondary: #{$jet};
+  --light-button-success: #{$forest-green};
+  --light-button-danger: #{$crimson};
+  --light-button-warning: #{$amber};
+  --light-button-info: #{$slate-gray};
+  --light-button-light: #{$off-white};
+  --light-button-dark: #{$midnight-blue};
+  //light hovered Button
+  --light-button-primary-hover: #{$midnight-navy-hover};
+  --light-button-secondary-hover: #{$jet-hover};
+  --light-button-success-hover: #{$forest-green-hover};
+  --light-button-danger-hover: #{$crimson-hover};
+  --light-button-warning-hover: #{$amber-hover};
+  --light-button-info-hover: #{$slate-gray-hover};
+  --light-button-light-hover: #{$off-white};
+  --light-button-dark-hover: #{$midnight-blue};
+  //light active Button
+  --light-button-primary-active: #{$midnight-navy-hover};
+  --light-button-secondary-active: #{$jet-hover};
+  --light-button-success-active: #{$forest-green-hover};
+  --light-button-danger-active: #{$crimson-hover};
+  --light-button-warning-active: #{$amber-hover};
+  --light-button-info-active: #{$slate-gray-hover};
+  --light-button-light-active: #{$off-white};
+  --light-button-dark-active: #{$midnight-blue};
+  //light disabled Button
+  --light-button-primary-disabled: #{$midnight-navy-hover};
+  --light-button-secondary-disabled: #{$jet-hover};
+  --light-button-success-disabled: #{$forest-green-hover};
+  --light-button-danger-disabled: #{$crimson-hover};
+  --light-button-warning-disabled: #{$amber-hover};
+  --light-button-info-disabled: #{$slate-gray-hover};
+  --light-button-light-disabled: #{$off-white};
+  --light-button-dark-disabled: #{$midnight-blue};
+
+  //dark Button colors
+  --dark-button-primary: #{$forest-green};
+  --dark-button-secondary: #{$jet};
+  --dark-button-success: #{$forest-green};
+  --dark-button-danger: #{$crimson};
+  --dark-button-warning: #{$amber};
+  --dark-button-info: #{$slate-gray};
+  --dark-button-light: #{$off-white};
+  --dark-button-dark: #{$midnight-blue};
+
+  //dark hovered Button
+  --dark-button-primary-hover: #{$midnight-navy-hover};
+  --dark-button-secondary-hover: #{$jet-hover};
+  --dark-button-success-hover: #{$forest-green-hover};
+  --dark-button-danger-hover: #{$crimson-hover};
+  --dark-button-warning-hover: #{$amber-hover};
+  --dark-button-info-hover: #{$slate-gray-hover};
+  --dark-button-light-hover: #{$off-white};
+  --dark-button-dark-hover: #{$midnight-blue};
+
+  //dark active Button
+  --dark-button-primary-active: #{$midnight-navy-hover};
+  --dark-button-secondary-active: #{$jet-hover};
+  --dark-button-success-active: #{$forest-green-hover};
+  --dark-button-danger-active: #{$crimson-hover};
+  --dark-button-warning-active: #{$amber-hover};
+  --dark-button-info-active: #{$slate-gray-hover};
+  --dark-button-light-active: #{$off-white};
+  --dark-button-dark-active: #{$midnight-blue};
+  //dark disabled Button
+  --dark-button-primary-disabled: #{$midnight-navy-hover};
+  --dark-button-secondary-disabled: #{$jet-hover};
+  --dark-button-success-disabled: #{$forest-green-hover};
+  --dark-button-danger-disabled: #{$crimson-hover};
+  --dark-button-warning-disabled: #{$amber-hover};
+  --dark-button-info-disabled: #{$slate-gray-hover};
+  --dark-button-light-disabled: #{$off-white};
+  --dark-button-dark-disabled: #{$midnight-blue};
+
+  // text color
+  --text-white: #{$white};
+  --text-dark: #{$black};
+
+  // font color
+  --main-font-family: sans-serif;
+}

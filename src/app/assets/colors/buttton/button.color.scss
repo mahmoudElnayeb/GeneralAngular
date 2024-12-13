@@ -1,483 +1,146 @@
-@use "../buttton/button-color-light.scss" as light;
-@use "../buttton/button-color-dark.scss" as dark;
+@use "../../style/modes.scss";
+@use "../../style/colors.scss";
+.button {
+  &.primary {
+    background-color: var(--button-primary);
+    border-color: var(--button-primary);
+    color: var(--white);
 
-.app-btn {
-    border: 1px solid !important;
-    border-radius: 8px;
-}
-
-html.light-theme {
-    .app-btn-primary {
-        background-color: light.$primary;
-        border-color: light.$primary;
-        color: light.$primary-text;
-
-        &:hover {
-            background-color: light.$primary-hover;
-            border-color: light.$primary-hover;
-            color: #fff;
-        }
-
-        &:active {
-            background-color: light.$primary-active;
-            border-color: light.$primary-active;
-            color: #fff;
-        }
-
-        &:focus {
-            background-color: light.$primary-focus;
-            border-color: light.$primary-focus;
-            color: #fff;
-        }
-        &:disabled {
-            background-color: light.$primary-disabled;
-            border-color: light.$primary-disabled;
-            color: #fff;
-        }
+    &:hover {
+      background-color: var(--button-primary-hover);
+      border-color: var(--button-primary-hover);
     }
 
-    .app-btn-secondary {
-        background-color: light.$secondary;
-        border-color: light.$secondary;
-        color: light.$secondary-text;
-
-        &:hover {
-            background-color: light.$secondary-hover;
-            border-color: light.$secondary-hover;
-            color: #fff;
-        }
-
-        &:active {
-            background-color: light.$secondary-active;
-            border-color: light.$secondary-active;
-            color: #fff;
-        }
-
-        &:focus {
-            background-color: light.$secondary-focus;
-            border-color: light.$secondary-focus;
-            color: #fff;
-        }
-
-        &:disabled {
-            background-color: light.$secondary-disabled;
-            border-color: light.$secondary-disabled;
-            color: #fff;
-        }
+    &:active {
+      background-color: var(--button-primary-active);
+      border-color: var(--button-primary-active);
     }
 
-    .app-btn-success {
-        background-color: light.$success;
-        border-color: light.$success;
-        color: light.$success-text;
-
-        &:hover {
-            background-color: light.$success-hover;
-            border-color: light.$success-hover;
-            color: #fff;
-        }
-
-        &:active {
-            background-color: light.$success-active;
-            border-color: light.$success-active;
-            color: #fff;
-        }
-
-        &:focus {
-            background-color: light.$success-focus;
-            border-color: light.$success-focus;
-            color: #fff;
-        }
-
-        &:disabled {
-            background-color: light.$success-disabled;
-            border-color: light.$success-disabled;
-            color: #fff;
-        }
+    &:disabled {
+      background-color: var(--button-primary-disabled);
+      border-color: var(--button-primary-disabled);
     }
 
-    .app-btn-warning {
-        background-color: light.$warning;
-        border-color: light.$warning;
-        color: light.$warning-text;
-
-        &:hover {
-            background-color: light.$warning-hover;
-            border-color: light.$warning-hover;
-            color: #fff;
-        }
-
-        &:active {
-            background-color: light.$warning-active;
-            border-color: light.$warning-active;
-            color: #fff;
-        }
-
-        &:focus {
-            background-color: light.$warning-focus;
-            border-color: light.$warning-focus;
-            color: #fff;
-        }
-
-        &:disabled {
-            background-color: light.$warning-disabled;
-            border-color: light.$warning-disabled;
-            color: #fff;
-        }
-    }
-
-    .app-btn-primary-outline {
+    &.outline {
+      background-color: transparent;
+      border-color: var(--button-primary);
+      color: var(--button-primary);
+      &:hover {
         background-color: transparent;
-        border-color: light.$primary;
-        color: light.$primary;
+        border-color: var(--button-primary);
+        color: var(--white);
+      }
+    }
+  }
 
-        &:hover {
-            background-color: transparent;
-            border-color: light.$primary-hover;
-            color: #fff;
-        }
+  &.secondary {
+    background-color: var(--button-secondary);
+    border-color: var(--button-secondary);
+    color: var(--white);
 
-        &:active {
-            background-color: light.$primary-active;
-            border-color: light.$primary-active;
-        }
-
-        &:focus {
-            background-color: light.$primary-focus;
-            border-color: light.$primary-focus;
-            color: #fff;
-        }
-        &:disabled {
-            background-color: light.$primary-disabled;
-            border-color: light.$primary-disabled;
-            color: #fff;
-        }
+    &:hover {
+      background-color: var(--button-secondary-hover);
+      border-color: var(--button-secondary-hover);
     }
 
-    .app-btn-secondary-outline {
+    &:active {
+      background-color: var(--button-secondary-active);
+      border-color: var(--button-secondary-active);
+    }
+
+    &:disabled {
+      background-color: var(--button-secondary-disabled);
+      border-color: var(--button-secondary-disabled);
+    }
+  }
+  &.success {
+    background-color: var(--button-success);
+    border-color: var(--button-success);
+    color: var(--white);
+
+    &:hover {
+      background-color: var(--button-success-hover);
+      border-color: var(--button-success-hover);
+    }
+
+    &:active {
+      background-color: var(--button-success-active);
+      border-color: var(--button-success-active);
+    }
+
+    &:disabled {
+      background-color: var(--button-success-disabled);
+      border-color: var(--button-success-disabled);
+    }
+    &.outline {
+      background-color: transparent;
+      border-color: var(--button-secondary);
+      color: var(--button-secondary);
+      &:hover {
         background-color: transparent;
-        border-color: light.$secondary !important;
-        color: light.$secondary !important;
+        border-color: var(--button-secondary);
+        color: var(--white);
+      }
+    }
+  }
+  &.danger {
+    background-color: var(--button-danger);
+    border-color: var(--button-danger);
+    color: var(--white);
 
-        &:hover {
-            background-color: transparent;
-            border-color: light.$secondary-hover;
-        }
-
-        &:active {
-            background-color: light.$secondary-active;
-            border-color: light.$secondary-active;
-            color: #fff;
-        }
-
-        &:focus {
-            background-color: light.$secondary-focus;
-            border-color: light.$secondary-focus;
-            color: #fff;
-        }
-
-        &:disabled {
-            background-color: light.$secondary-disabled;
-            border-color: light.$secondary-disabled;
-            color: #fff;
-        }
+    &:hover {
+      background-color: var(--button-danger-hover);
+      border-color: var(--button-danger-hover);
     }
 
-    .app-btn-success-outline {
+    &:active {
+      background-color: var(--button-danger-active);
+      border-color: var(--button-danger-active);
+    }
+
+    &:disabled {
+      background-color: var(--button-danger-disabled);
+      border-color: var(--button-danger-disabled);
+    }
+    &.outline {
+      background-color: transparent;
+      border-color: var(--button-danger);
+      color: var(--button-danger);
+      &:hover {
         background-color: transparent;
-        border-color: light.$success;
-        color: light.$success;
+        border-color: var(--button-danger);
+        color: var(--white);
+      }
+    }
+  }
+  &.warning {
+    background-color: var(--button-warning);
+    border-color: var(--button-warning);
+    color: var(--white);
 
-        &:hover {
-            background-color: transparent;
-            border-color: light.$success-hover;
-            color: #fff;
-        }
-
-        &:active {
-            background-color: light.$success-active;
-            border-color: light.$success-active;
-            color: #fff;
-        }
-
-        &:focus {
-            background-color: light.$success-focus;
-            border-color: light.$success-focus;
-            color: #fff;
-        }
-
-        &:disabled {
-            background-color: light.$success-disabled;
-            border-color: light.$success-disabled;
-            color: #fff;
-        }
+    &:hover {
+      background-color: var(--button-warning-hover);
+      border-color: var(--button-warning-hover);
     }
 
-    .app-btn-warning-outline {
+    &:active {
+      background-color: var(--button-warning-active);
+      border-color: var(--button-warning-active);
+    }
+
+    &:disabled {
+      background-color: var(--button-warning-disabled);
+      border-color: var(--button-warning-disabled);
+    }
+    &.outline {
+      background-color: transparent;
+      border-color: var(--button-warning);
+      color: var(--button-warning);
+      &:hover {
         background-color: transparent;
-        border-color: light.$warning;
-        color: light.$warning;
-
-        &:hover {
-            background-color: transparent;
-            border-color: light.$warning-hover;
-            color: #fff;
-        }
-
-        &:active {
-            background-color: light.$warning-active;
-            border-color: light.$warning-active;
-            color: #fff;
-        }
-
-        &:focus {
-            background-color: light.$warning-focus;
-            border-color: light.$warning-focus;
-            color: #fff;
-        }
-
-        &:disabled {
-            background-color: light.$warning-disabled;
-            border-color: light.$warning-disabled;
-            color: #fff;
-        }
+        border-color: var(--button-warning);
+        color: var(--white);
+      }
     }
-}
-
-html.dark-theme {
-    .app-btn-primary {
-        background-color: dark.$primary;
-        border-color: dark.$primary;
-        color: dark.$primary-text;
-
-        &:hover {
-            background-color: dark.$primary-hover;
-            border-color: dark.$primary-hover;
-            color: #fff;
-        }
-
-        &:active {
-            background-color: dark.$primary-active;
-            border-color: dark.$primary-active;
-            color: #fff;
-        }
-
-        &:focus {
-            background-color: dark.$primary-focus;
-            border-color: dark.$primary-focus;
-            color: #fff;
-        }
-        &:disabled {
-            background-color: dark.$primary-disabled;
-            border-color: dark.$primary-disabled;
-            color: #fff;
-        }
-    }
-
-    .app-btn-secondary {
-        background-color: dark.$secondary;
-        border-color: dark.$secondary;
-        color: dark.$secondary-text;
-
-        &:hover {
-            background-color: dark.$secondary-hover;
-            border-color: dark.$secondary-hover;
-            color: #fff;
-        }
-
-        &:active {
-            background-color: dark.$secondary-active;
-            border-color: dark.$secondary-active;
-            color: #fff;
-        }
-
-        &:focus {
-            background-color: dark.$secondary-focus;
-            border-color: dark.$secondary-focus;
-            color: #fff;
-        }
-
-        &:disabled {
-            background-color: dark.$secondary-disabled;
-            border-color: dark.$secondary-disabled;
-            color: #fff;
-        }
-    }
-
-    .app-btn-success {
-        background-color: dark.$success;
-        border-color: dark.$success;
-        color: dark.$success-text;
-
-        &:hover {
-            background-color: dark.$success-hover;
-            border-color: dark.$success-hover;
-            color: #fff;
-        }
-
-        &:active {
-            background-color: dark.$success-active;
-            border-color: dark.$success-active;
-            color: #fff;
-        }
-
-        &:focus {
-            background-color: dark.$success-focus;
-            border-color: dark.$success-focus;
-            color: #fff;
-        }
-
-        &:disabled {
-            background-color: dark.$success-disabled;
-            border-color: dark.$success-disabled;
-            color: #fff;
-        }
-    }
-
-    .app-btn-warning {
-        background-color: dark.$warning;
-        border-color: dark.$warning;
-        color: dark.$warning-text;
-
-        &:hover {
-            background-color: dark.$warning-hover;
-            border-color: dark.$warning-hover;
-            color: #fff;
-        }
-
-        &:active {
-            background-color: dark.$warning-active;
-            border-color: dark.$warning-active;
-            color: #fff;
-        }
-
-        &:focus {
-            background-color: dark.$warning-focus;
-            border-color: dark.$warning-focus;
-            color: #fff;
-        }
-
-        &:disabled {
-            background-color: dark.$warning-disabled;
-            border-color: dark.$warning-disabled;
-            color: #fff;
-        }
-    }
-
-    .app-btn-primary-outline {
-        background-color: transparent;
-        border-color: dark.$primary;
-        color: dark.$primary;
-
-        &:hover {
-            background-color: transparent;
-            border-color: dark.$primary-hover;
-            color: #fff;
-        }
-
-        &:active {
-            background-color: dark.$primary-active;
-            border-color: dark.$primary-active;
-        }
-
-        &:focus {
-            background-color: dark.$primary-focus;
-            border-color: dark.$primary-focus;
-            color: #fff;
-        }
-        &:disabled {
-            background-color: dark.$primary-disabled;
-            border-color: dark.$primary-disabled;
-            color: #fff;
-        }
-    }
-
-    .app-btn-secondary-outline {
-        background-color: transparent;
-        border-color: dark.$secondary !important;
-        color: dark.$secondary !important;
-
-        &:hover {
-            background-color: transparent;
-            border-color: dark.$secondary-hover;
-        }
-
-        &:active {
-            background-color: dark.$secondary-active;
-            border-color: dark.$secondary-active;
-            color: #fff;
-        }
-
-        &:focus {
-            background-color: dark.$secondary-focus;
-            border-color: dark.$secondary-focus;
-            color: #fff;
-        }
-
-        &:disabled {
-            background-color: dark.$secondary-disabled;
-            border-color: dark.$secondary-disabled;
-            color: #fff;
-        }
-    }
-
-    .app-btn-success-outline {
-        background-color: transparent;
-        border-color: dark.$success;
-        color: dark.$success;
-
-        &:hover {
-            background-color: transparent;
-            border-color: dark.$success-hover;
-            color: #fff;
-        }
-
-        &:active {
-            background-color: dark.$success-active;
-            border-color: dark.$success-active;
-            color: #fff;
-        }
-
-        &:focus {
-            background-color: dark.$success-focus;
-            border-color: dark.$success-focus;
-            color: #fff;
-        }
-
-        &:disabled {
-            background-color: dark.$success-disabled;
-            border-color: dark.$success-disabled;
-            color: #fff;
-        }
-    }
-
-    .app-btn-warning-outline {
-        background-color: transparent;
-        border-color: dark.$warning;
-        color: dark.$warning;
-
-        &:hover {
-            background-color: transparent;
-            border-color: dark.$warning-hover;
-            color: #fff;
-        }
-
-        &:active {
-            background-color: dark.$warning-active;
-            border-color: dark.$warning-active;
-            color: #fff;
-        }
-
-        &:focus {
-            background-color: dark.$warning-focus;
-            border-color: dark.$warning-focus;
-            color: #fff;
-        }
-
-        &:disabled {
-            background-color: dark.$warning-disabled;
-            border-color: dark.$warning-disabled;
-            color: #fff;
-        }
-    }
+  }
 }

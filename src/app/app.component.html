@@ -1,11 +1,24 @@
 <router-outlet></router-outlet>
 
-
 <div class="d-flex justify-content-center gap-5 flex-column align-items-center">
-    <app-buttons [type]="'button'" [title]="'Submit'" [disabled]="false" [loading]="false" (onClick)="click($event)"
-    [variant]="'primary'"></app-buttons>
+  <app-buttons
+    [type]="'button'"
+    [title]="'Submit'"
+    [disabled]="false"
+    [loading]="false"
+    (onClick)="click($event)"
+    [variant]="'primary'"
+  ></app-buttons>
 
-    <app-inputs [type]="'text'" [placeholder]="'Email'"></app-inputs>
-    <app-inputs [type]="'password'" [placeholder]="'Password'" [icon]="'lock'"></app-inputs>
-    <app-inputs [type]="'number'" [placeholder]="'Salary'" [icon]="'money-bill'"></app-inputs>
+  <app-inputs [type]="'text'" [placeholder]="'Email'"></app-inputs>
+  <app-inputs
+    [type]="'password'"
+    [placeholder]="'Password'"
+    [icon]="'lock'"
+  ></app-inputs>
+  <app-inputs
+    [type]="'number'"
+    [placeholder]="'Salary'"
+    [icon]="'money-bill'"
+  ></app-inputs>
 </div>

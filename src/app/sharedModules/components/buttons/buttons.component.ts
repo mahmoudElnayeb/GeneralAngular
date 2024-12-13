@@ -16,7 +16,8 @@ export class ButtonsComponent {
   loading = input<boolean>(false);
   variant = input<ButtonColor>('primary');
   onClick = output<boolean>();
-
+  size=input<'large' | 'medium' | 'small'>('medium'); 
+  outline = input<boolean>(false)
 
   click(): void {
     !(this.loading() || this.disabled()) && this.onClick.emit(true);
