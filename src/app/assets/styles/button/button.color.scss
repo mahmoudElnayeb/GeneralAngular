@@ -1,5 +1,7 @@
-@use "../../style/modes.scss";
-@use "../../style/colors.scss";
+@use "../../color/colors.scss" as *;
+@use "../../color/css-variable.scss" as *;
+@use "../../color/topography.scss" as *;
+
 .button {
   &.primary {
     background-color: var(--button-primary);

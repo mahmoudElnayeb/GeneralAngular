@@ -1,43 +1,5 @@
-@use "./css-variable.scss";
+@use "./css-variable.scss" as *;
 
-:root {
-  --primary-color: var(--light-primary);
-  --secondary-color: var(--light-secondary);
-  --text-color: var(--light-text);
-  --background-color: var(--light-background);
-  --button-primary: var(--light-button-primary);
-  --button-secondary: var(--light-button-secondary);
-  --button-success: var(--light-button-success);
-  --button-danger: var(--light-button-danger);
-  --button-warning: var(--light-button-warning);
-  --button-info: var(--light-button-info);
-  --button-light: var(--light-button-light);
-  --button-dark: var(--light-button-dark);
-  --button-primary-hover: var(--light-button-primary-hover);
-  --button-secondary-hover: var(--light-button-secondary-hover);
-  --button-success-hover: var(--light-button-success-hover);
-  --button-danger-hover: var(--light-button-danger-hover);
-  --button-warning-hover: var(--light-button-warning-hover);
-  --button-info-hover: var(--light-button-info-hover);
-  --button-light-hover: var(--light-button-light-hover);
-  --button-dark-hover: var(--light-button-dark-hover);
-  --button-primary-active: var(--light-button-primary-active);
-  --button-secondary-active: var(--light-button-secondary-active);
-  --button-success-active: var(--light-button-success-active);
-  --button-danger-active: var(--light-button-danger-active);
-  --button-warning-active: var(--light-button-warning-active);
-  --button-info-active: var(--light-button-info-active);
-  --button-light-active: var(--light-button-light-active);
-  --button-dark-active: var(--light-button-dark-active);
-  --button-primary-disabled: var(--light-button-primary-disabled);
-  --button-secondary-disabled: var(--light-button-secondary-disabled);
-  --button-success-disabled: var(--light-button-success-disabled);
-  --button-danger-disabled: var(--light-button-danger-disabled);
-  --button-warning-disabled: var(--light-button-warning-disabled);
-  --button-info-disabled: var(--light-button-info-disabled);
-  --button-light-disabled: var(--light-button-light-disabled);
-  --button-dark-disabled: var(--light-button-dark-disabled);
-}
 [data-theme="light"] {
   --primary-color: var(--light-primary);
   --secondary-color: var(--light-secondary);
@@ -75,6 +37,13 @@
   --button-info-disabled: var(--light-button-info-disabled);
   --button-light-disabled: var(--light-button-light-disabled);
   --button-dark-disabled: var(--light-button-dark-disabled);
+  --text: var(--input-text-light);
+  --input: var(--input-background-light);
+  --boarder: var(--input-background-light);
+  --background: var(--background-light);
+  --primary-text: var(--primary-text-light);
+  --link: var(--primary-text-light);
+  --link-hover: var(--light-button-primary-hover);
 }
 [data-theme="dark"] {
   --primary-color: var(--dark-primary);
@@ -113,4 +82,11 @@
   --button-info-disabled: var(--dark-button-info-disabled);
   --button-light-disabled: var(--dark-button-light-disabled);
   --button-dark-disabled: var(--dark-button-dark-disabled);
+  --text: var(--input-text-dark);
+  --input: var(--input-background-dark);
+  --boarder: var(--input-background-dark);
+  --background: var(--background-dark);
+  --primary-text: var(--primary-text-dark);
+  --link: var(--primary-text-dark);
+  --link-hover: var(--dark-button-primary-hover);
 }

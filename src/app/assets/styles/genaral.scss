@@ -1,0 +1,54 @@
+@use "../color/mixins.scss" as *;
+@use "../color/colors.scss" as *;
+
+.header-container {
+  @include container;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--boarder);
+}
+
+.footer-container {
+  @include container;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid var(--boarder);
+  background-color: $white;
+  padding: 2rem;
+  .product-name {
+    color: var(--primary-text);
+    font-size: 20;
+    font-weight: 700;
+  }
+  .links {
+    list-style: none;
+
+    li {
+      &:not(:last-child)::after {
+        content: "|";
+        margin-inline: 5px;
+        font-size: 13px;
+      }
+
+      a {
+        color: var(--link);
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 13px;
+        &:hover {
+          color: var(--link-hover);
+        }
+      }
+    }
+  }
+  p {
+    color: var(--text-color);
+    font-size: 11px;
+    margin-top: 5px;
+    line-height: 0.5;
+    font-weight: 900;
+    letter-spacing: -0.001rem;
+  }
+}

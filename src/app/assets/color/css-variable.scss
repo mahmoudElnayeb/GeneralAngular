@@ -1,4 +1,4 @@
-@import "./colors.scss";
+@use "./colors.scss" as *;
 
 :root {
   --white: #{$white};
@@ -12,7 +12,7 @@
   --dark: #{$midnight-blue};
 
   //light colors
-  --light-primary: #{$linen};
+  --light-primary: #{$pale-cream};
   --light-secondary: #{$midnight-blue};
   --light-background: #{$off-white};
   --light-text: #{$dim-gray};
@@ -24,7 +24,7 @@
   --dark-text: #{$amber};
 
   // light Button colors
-  --light-button-primary: #{$midnight-navy};
+  --light-button-primary: #{$deep-navy};
   --light-button-secondary: #{$jet};
   --light-button-success: #{$forest-green};
   --light-button-danger: #{$crimson};
@@ -33,7 +33,7 @@
   --light-button-light: #{$off-white};
   --light-button-dark: #{$midnight-blue};
   //light hovered Button
-  --light-button-primary-hover: #{$midnight-navy-hover};
+  --light-button-primary-hover: #{$ocean-teal};
   --light-button-secondary-hover: #{$jet-hover};
   --light-button-success-hover: #{$forest-green-hover};
   --light-button-danger-hover: #{$crimson-hover};
@@ -102,6 +102,25 @@
   // text color
   --text-white: #{$white};
   --text-dark: #{$black};
+
+  // input color light
+  --input-text-light: #{$off-white};
+  --input-background-light: #{$soft-peach};
+  --background-dark: #{$soft-peach};
+  --background-light: #{$pale-cream};
+
+  --primary-text-light: #{$deep-navy};
+  --primary-text-dark: #{$deep-navy};
+
+  // input color dark
+  --input-text-dark: #{$white};
+  --input-background-dark: #{$midnight-blue};
+
+  // border color light
+  --border-color-light: #{$soft-peach};
+
+  // border color dark
+  --border-color-dark: #{$midnight-blue};
 
   // font color
   --main-font-family: sans-serif;

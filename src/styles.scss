@@ -1,7 +1,13 @@
-@use "../src/app/assets/style/topography.scss" as *;
-@use "../src/app/assets/style/css-variable.scss" as *;
-@use "../src/app/assets/style/modes.scss" as *;
-@use "../src/app/assets/style/mixins.scss" as *;
-@use "../src/app/assets/style/brackpoint-variable.scss" as *;
-@use "../src/app/assets/style/transactions.variable.scss" as *;
-@use "../src/app/assets/colors/buttton/button.color.scss" as *;
+@use "./app/assets/color/modes.scss" as *;
+@use "./app/assets/styles/genaral.scss" as *;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body,
+html {
+  height: 100%;
+  width: 100%;
+}

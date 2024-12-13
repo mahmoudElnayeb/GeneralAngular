@@ -1,3 +1,6 @@
+@use "./colors.scss" as *;
+@use "./css-variable.scss" as *;
+
 @mixin button {
   border-radius: 16px;
   border: 1px solid;
@@ -31,4 +34,29 @@
   font-weight: 500;
   line-height: 16px;
   letter-spacing: 0.28px;
+}
+
+@mixin form-control {
+  position: relative;
+  display: flex;
+  gap: 0.2rem;
+  align-items: center;
+  width: 290px;
+  padding: 0 5px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px var(--boarder);
+  outline: none;
+  color: var(--text);
+  &:focus {
+    outline: none;
+    border: 1px solid var(--boarder);
+  }
+}
+
+@mixin container {
+  background-color: transparent;
+  padding: 10px;
+  text-align: center;
+  height: 100px;
+  border-radius: 16px;
 }

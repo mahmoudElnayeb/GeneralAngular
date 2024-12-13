@@ -1,20 +1,13 @@
+@use "../../../assets/style/mixins.scss" as *;
+
 .error-message {
   color: var(--danger);
   font-size: 0.8em;
   margin-top: 5px;
 }
 
-.app-input-container {
-  position: relative;
-  display: flex;
-  gap: 0.2rem;
-  align-items: center;
-  width: 290px;
-  padding: 0 5px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  box-shadow: 0 0 5px #ccc;
-  outline: none;
+.input-container {
+  @include form-control;
 
   & > i {
     margin-inline: 5px;
