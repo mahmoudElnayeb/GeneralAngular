@@ -1,22 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 
 import { InnerViewComponent } from './pages/inner-view/inner-view.component';
+import { RouterOutlet } from '@angular/router';
+import { HeaderComponent } from './sharedModules/components/header/header.component';
+import { FooterComponent } from './sharedModules/components/footer/footer.component';
 
 @Component({
   selector: 'app-root',
-  imports: [InnerViewComponent],
+  imports: [RouterOutlet, HeaderComponent, FooterComponent, InnerViewComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
 export class AppComponent implements OnInit {
-  ngOnInit(): void {
-    // // Check the user's system theme preference (optional)
-    // const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    // // Set dark theme as default
-    // const theme = prefersDarkMode ? 'dark' : 'dark';  // Force dark theme if you want it always
-    // // Set the theme to dark on initial load (if you want to dynamically change this)
-    // document.documentElement.setAttribute('data-theme', theme);
-  }
+  ngOnInit(): void {}
   title = 'App2025';
 
   click(event: boolean) {

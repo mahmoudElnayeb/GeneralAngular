@@ -5,7 +5,7 @@ import { FooterComponent } from '../../sharedModules/components/footer/footer.co
 
 @Component({
   selector: 'app-inner-view',
-  imports: [RouterOutlet, HeaderComponent, FooterComponent],
+  imports: [RouterOutlet, FooterComponent, HeaderComponent],
   templateUrl: './inner-view.component.html',
   styleUrl: './inner-view.component.scss',
 })
