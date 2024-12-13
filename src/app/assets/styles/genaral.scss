@@ -17,7 +17,7 @@
   justify-content: center;
   border: 1px solid var(--boarder);
   background-color: $white;
-  padding: 2rem;
+  padding: 0.1rem 2rem;
   .product-name {
     color: var(--primary-text);
     font-size: 20;
@@ -48,9 +48,13 @@
     color: var(--text-color);
     font-size: 11px;
     margin-top: 5px;
-    line-height: 0.5;
     font-weight: 900;
     letter-spacing: -0.001rem;
+  }
+  @media screen and (min-width: var(--breakpoint-md)) {
+    .flex-row {
+      flex-direction: column;
+    }
   }
 }
 
@@ -61,4 +65,13 @@
 }
 .row {
   max-width: 100% !important;
+}
+
+.inner-view {
+  padding: 1rem 2rem;
+  background-color: var(--background);
+  min-height: 100vh;
+}
+.h-77 {
+  height: 77%;
 }

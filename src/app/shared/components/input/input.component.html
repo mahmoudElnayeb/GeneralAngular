@@ -4,8 +4,7 @@
     [type]="type() === 'password' ? (closedEye ? 'password' : 'text') : type()"
     [disabled]="disabled"
     class="input"
-    [ngClass]="{ 'has-value': appVal }"
-    [(ngModel)]="appVal"
+    [ngClass]="{ 'has-value': value() }"
   />
 
   <span class="placeholder-label">{{ placeholder() }}</span>

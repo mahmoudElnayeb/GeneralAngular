@@ -1,10 +1,5 @@
-<div class="container row my-3">
-  <div class="col-6">spodjfpsdfs[dnf'l</div>
-  <div class="col-6">
-    <img
-      src="https://corporate.alinma.com/cib-login-ui/login-cover.png"
-      alt="cover"
-      class="w-100 h-100"
-    />
-  </div>
+<div class="login-container h-100">
+  <form class="form-horizontal" [formGroup]="loginForm">
+    <app-input type="email" placeholder="Email" [icon]="'user'"></app-input>
+  </form>
 </div>

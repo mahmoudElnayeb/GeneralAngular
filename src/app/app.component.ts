@@ -1,13 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-
-import { InnerViewComponent } from './pages/inner-view/inner-view.component';
 import { RouterOutlet } from '@angular/router';
-import { HeaderComponent } from './sharedModules/components/header/header.component';
-import { FooterComponent } from './sharedModules/components/footer/footer.component';
+import { HeaderComponent } from './shared/components/header/header.component';
+import { FooterComponent } from './shared/components/footer/footer.component';
+import { LoginComponent } from './modules/authentication/login/login.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HeaderComponent, FooterComponent, InnerViewComponent],
+  imports: [RouterOutlet, HeaderComponent, FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
