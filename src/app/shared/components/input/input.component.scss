@@ -6,6 +6,10 @@
   margin-top: 5px;
 }
 
+.icon {
+  @include icon;
+}
+
 .input-container {
   @include form-control;
 
@@ -66,4 +70,8 @@ input[type="number"]::-webkit-outer-spin-button {
   margin: 0;
 }
 
+.disabled {
+  background-color: light-dark(rgba(239, 239, 239, 0.3), rgba(59, 59, 59, 0.3));
+  color: light-dark(rgb(84, 84, 84), rgb(170, 170, 170));
+}
 // scale(0.85) translateY(-0.5rem) translateX(-1.7rem)

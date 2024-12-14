@@ -8,10 +8,11 @@
   padding: 1rem 3rem;
   text-align: center;
   cursor: pointer;
+  width: 100%;
 }
 
 @mixin button-l {
-  font-family: var(--main-font-family);
+  font-family: var(--font-family-sans-serif);
   font-size: 16px;
   font-weight: 600;
   line-height: 20px;
@@ -19,7 +20,7 @@
 }
 
 @mixin button-m {
-  font-family: var(--main-font-family);
+  font-family: var(--font-family-sans-serif);
   font-size: 14px;
   font-style: normal;
   font-weight: 600;
@@ -28,7 +29,7 @@
 }
 
 @mixin button-s {
-  font-family: var(--main-font-family);
+  font-family: var(--font-family-sans-serif);
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
@@ -41,7 +42,7 @@
   display: flex;
   gap: 0.2rem;
   align-items: center;
-  width: 290px;
+  // width: 290px;
   padding: 0 5px;
   border-radius: 5px;
   box-shadow: 0 0 5px var(--boarder);
@@ -58,4 +59,12 @@
   text-align: center;
   border-radius: 16px;
   overflow: hidden;
+}
+
+@mixin icon {
+  color: var(--text-color);
+}
+
+@mixin text-color {
+  color: var(--text-color);
 }

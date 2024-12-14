@@ -18,3 +18,7 @@
 .container {
   @include container;
 }
+
+.text-color {
+  @include text-color;
+}

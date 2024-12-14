@@ -42,8 +42,8 @@
   --boarder: var(--input-background-light);
   --background: var(--background-light);
   --primary-text: var(--primary-text-light);
-  --link: var(--primary-text-light);
-  --link-hover: var(--light-button-primary-hover);
+  --link: var(--light-text);
+  --link-hover: var(--light-text-hover);
 }
 [data-theme="dark"] {
   --primary-color: var(--dark-primary);
@@ -87,6 +87,6 @@
   --boarder: var(--input-background-dark);
   --background: var(--background-dark);
   --primary-text: var(--primary-text-dark);
-  --link: var(--primary-text-dark);
-  --link-hover: var(--dark-button-primary-hover);
+  --link: var(--dark-tex);
+  --link-hover: var(--dark-text-hover);
 }

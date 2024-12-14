@@ -1,17 +1,26 @@
-<div class="input-container" [attr.aria-icon]="icon() != undefined">
-  @if(icon()) {<i class="fa  fa-{{ icon() }}"></i>}
-  <input
-    [type]="type() === 'password' ? (closedEye ? 'password' : 'text') : type()"
-    [disabled]="disabled"
-    class="input"
-    [ngClass]="{ 'has-value': value() }"
-  />
+<div class="d-flex flex-column mb-3" [class.disabled]="control()?.disabled">
+  <div class="input-container" [attr.aria-icon]="icon() != undefined">
+    @if(icon()) {<i class=" icon fa  fa-{{ icon() }}"></i>}
+    <input
+      [type]="
+        type() === 'password' ? (closedEye ? 'password' : 'text') : type()
+      "
+      class="input"
+      [ngClass]="{ 'has-value': value }"
+      [value]="value"
+      (input)="onInput($event)"
+      (blur)="markAsTouched()"
+      [disabled]="control()?.disabled"
+    />
 
-  <span class="placeholder-label">{{ placeholder() }}</span>
-  @if (type() === 'password'){ @if(!closedEye){
-  <i class="fa fa-eye" (click)="toggleEye()"></i>
-  }@else {
-  <i class="fa fa-eye-slash" (click)="toggleEye()"></i>
-  } }
-  <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+    <span class="placeholder-label">{{ placeholder() }}</span>
+    @if (type() === 'password'){ @if(!closedEye){
+    <i class="icon fa fa-eye" (click)="toggleEye()"></i>
+    }@else {
+    <i class="icon fa fa-eye-slash" (click)="toggleEye()"></i>
+    } }
+  </div>
+  <div *ngIf="errorMessage && touched" class="error-message text-start">
+    {{ errorMessage }}
+  </div>
 </div>

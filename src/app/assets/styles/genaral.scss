@@ -8,6 +8,7 @@
   align-items: center;
   border: 1px solid var(--boarder);
   padding: 0 1rem;
+  align-items: "center";
 }
 
 .footer-container {
@@ -74,4 +75,19 @@
 }
 .h-77 {
   height: 77%;
+}
+
+a {
+  color: var(--link) !important;
+  text-decoration: none !important;
+  font-weight: 600;
+  font-size: 18px;
+  display: inline-block;
+  &:hover {
+    color: var(--link-hover) !important;
+  }
+}
+
+* {
+  font-family: var(--font-family-monospace);
 }
