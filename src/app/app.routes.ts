@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { InnerViewComponent } from './pages/inner-view/inner-view.component';
-import { LoginComponent } from './pages/login/login.component';
+import { LoginComponent } from './modules/authenticate/login/login.component';
+import { RegisterComponent } from './modules/authenticate/register/register.component';
 
 export const routes: Routes = [
   {
@@ -15,6 +16,10 @@ export const routes: Routes = [
       {
         path: 'login',
         component: LoginComponent,
+      },
+      {
+        path: 'register',
+        component: RegisterComponent,
       },
     ],
   },

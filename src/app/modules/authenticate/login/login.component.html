@@ -1,0 +1,46 @@
+<div class="login-container h-100 p-5">
+  <h1 class="login-title text-color mb-5">Login To WebSite</h1>
+  <div class="mr-5">
+    <form class="form-horizontal" [formGroup]="loginForm">
+      <app-inputs
+        type="email"
+        placeholder="Email"
+        icon="envelope"
+        class="mb-3"
+        [formControlName]="'email'"
+        [control]="getControl('email')"
+        [errorMessages]="{
+          pattern: 'Email not Valid',
+          required: 'Email Is Required'
+        }"
+      >
+      </app-inputs>
+      <app-inputs
+        type="password"
+        placeholder="Password"
+        icon="lock"
+        [formControlName]="'password'"
+        [errorMessages]="{
+          required: 'Password is required',
+          minlength: 'Minimum Length is '
+        }"
+        [control]="getControl('password')"
+      >
+      </app-inputs>
+      <app-inputs type="password" placeholder="Reenter Password" icon="lock">
+      </app-inputs>
+
+      <div class="w-100 justify-content-center d-flex">
+        <app-buttons
+          [disabled]="!loginForm.valid"
+          (onClick)="login()"
+          title="Login"
+          type="submit"
+          class="w-70"
+        />
+      </div>
+    </form>
+
+    <a [routerLink]="['/register']" class="mt-3"> Don't Have Account ? </a>
+  </div>
+</div>

@@ -7,13 +7,19 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
-import { InputsComponent } from '../../shared/components/input/inputs.component';
-import { ButtonsComponent } from '../../shared/components/buttons/buttons.component';
+import { InputsComponent } from '../../../shared/components/input/inputs.component';
+import { ButtonsComponent } from '../../../shared/components/buttons/buttons.component';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [ReactiveFormsModule, InputsComponent, ButtonsComponent],
+  imports: [
+    ReactiveFormsModule,
+    RouterModule,
+    InputsComponent,
+    ButtonsComponent,
+  ],
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
 })

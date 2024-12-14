@@ -12,6 +12,7 @@
 
 .input-container {
   @include form-control;
+  min-width: 400px;
 
   & > i {
     margin-inline: 5px;
